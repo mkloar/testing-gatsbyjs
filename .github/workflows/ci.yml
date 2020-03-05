@@ -27,4 +27,4 @@ jobs:
       
     - name: npm build
       run: |
-        npm run predeploy --if-present
+        npm build
