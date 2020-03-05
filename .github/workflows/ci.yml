@@ -27,4 +27,4 @@ jobs:
       
     - name: npm build
       run: |
-        npm build
+        npm run-script build
