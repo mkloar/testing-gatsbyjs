@@ -1,7 +1,6 @@
 ---
 title: "Programming"
 date: "2020-03-08"
-path: "programming"
 ---
 
 
@@ -9,4 +8,4 @@ path: "programming"
 
 
 Programming in
-![Javascript](./js.png)
+![Javascript](images/js.png)
