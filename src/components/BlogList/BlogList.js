@@ -9,7 +9,7 @@ const BlogList = ({ blogs, prefetch }) => {
             {blogs.allMarkdownRemark.edges.map(({ node }) =>  {
                 if(prefetch) {
                     return (
-                        <Link to={`/blog/${node.frontmatter.path}`} key={node.id}>
+                        <Link to={`/blog/${node.fields.slug}`} key={node.id}>
                             <Blog>                        
                                 <h3>{ node.frontmatter.title }</h3>
                             </Blog>   
@@ -17,7 +17,7 @@ const BlogList = ({ blogs, prefetch }) => {
                     )
                 }
                 return (
-                    <a href={`/blog/${node.frontmatter.path}`} key={node.id}>
+                    <a href={`/blog/${node.fields.slug}`} key={node.id}>
                         <Blog>                        
                             <h3>{ node.frontmatter.title }</h3>
                         </Blog>   

@@ -34,6 +34,9 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
             path
           }
+          fields {
+            slug
+          }
           html
         }
       }

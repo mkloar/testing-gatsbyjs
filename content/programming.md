@@ -8,12 +8,5 @@ path: "programming"
 <div style="background-color: green;">Some text</div>
 
 
-dfdsfds
-
-
-
-
-gdsfgdf
-
-
-sdfgdfs
+Programming in
+![Javascript](./js.png)
