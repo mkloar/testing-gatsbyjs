@@ -8,16 +8,11 @@ module.exports = async ({ actions, graphql }) => {
     const allMarkdownRemark = await graphql(`
         query {
             allMarkdownRemark {
-                totalCount
                 edges {
                     node {
-                        id
-                        frontmatter {
-                            title
-                            date(formatString: "DD MMMM, YYYY")
-                            path
+                        fields {
+                            slug
                         }
-                        html
                     }
                 }
             }
@@ -32,11 +27,12 @@ module.exports = async ({ actions, graphql }) => {
 
 
     allMarkdownRemark.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        console.log(node)
         createPage({
-            path: `/blog/${node.frontmatter.path}`,
+            path: `/blog${node.fields.slug}`,
             component: articleTemplate,
-            context: { node }, // additional data can be passed via context
+            context: { 
+                slug: node.fields.slug 
+            }, // additional data can be passed via context
         })
     })
 
