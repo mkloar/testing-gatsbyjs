@@ -1,7 +1,6 @@
 ---
 title: "Sweet Pandas Eating Sweets"
 date: "2020-03-05"
-path: "pandas"
 ---
 
 Pandas are really sweet.
