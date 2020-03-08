@@ -8,7 +8,7 @@ import BlogList from '../templates/blog-list'
 
 const IndexPage =  ({ data, pageContext }) => {
   return (
-    <Layout data={data.site}>
+    <Layout title={data.site.siteMetadata.title}>
       <div>
         <h1>
           Amazing Pandas Eating Things
