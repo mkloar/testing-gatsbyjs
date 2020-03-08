@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { Template, BackButton } from '../theme'
 
-const BlogTemplate = ({ data }) => {
+const BlogPost = ({ data }) => {
     const post = data.markdownRemark
 
     return (
@@ -27,4 +27,4 @@ export const query = graphql`
   }
 `
 
-export default BlogTemplate
+export default BlogPost
